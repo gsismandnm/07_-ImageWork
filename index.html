@@ -4,45 +4,220 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İmage Work</title>
+    <title>Image Work</title>
     <link rel="stylesheet" href="bootstrap4.css">
-   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    
+
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">Damla's Life</a>
       
         <!-- Links -->
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-      
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Dropdown link
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Link 1</a>
-              <a class="dropdown-item" href="#">Link 2</a>
-              <a class="dropdown-item" href="#">Link 3</a>
-            </div>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">When a child</a>
+            </li>
+              
+            <li class="nav-item">
+                <a class="nav-link" href="#">School</a>
+            </li>
+              
+            <li class="nav-item">
+                <a class="nav-link" href="#">My Carier</a>
+            </li>
+          
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      My Family
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Father</a>
+                  <a class="dropdown-item" href="#">Mother</a>
+                  <a class="dropdown-item" href="#">Sisters</a>
+                </div>
+              </li>
         </ul>
-      </nav>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-xs-4 col-md-4" style="border-style:initial font-size:14px; font-style: italic;">
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos alias veritatis, eum, redit quia atque? Eos pariatur sint nulla ipsum earum reiciendis nobis?
+          </p>
+        </div>
+        
+        <div class="row-xs-3 col-md-3">          
+              <!-- Saat ekleme için hazır script ilave ettim. -->
+            <div class='time-frame'> 	
+                  <div id='tarih-bolumu'></div> 	
+                  <div id='saat-bolumu'></div> 
+                  </div><style type="text/css"> 	.time-frame { 		background-color: #027bb5; 		color: #fff; 		width: auto; 		min-width: 160px; 		font-family: Arial; 		margin:0 auto; 		display:table; 		padding:10px 10px; 		 		
+                        -webkit-border-radius: 5px; 		-moz-border-radius: 5px; 		border-radius: 5px; 	}  	.time-frame >
+                        div { 		width: 100%; 		text-align: center; 	}  	#tarih-bolumu { 		font-size: 18px; 		color:#a9fff7; 	} 	#saat-bolumu { 		font-size: 32px; 		line-height: 30px; 		margin-top:5px; 	} 
+                  </style><script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script> 
+                  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script> 
+                  <script type="text/javascript">
+                          $(window).load(function(){
+                          $(document).ready(function() {
+                              var interval = setInterval(function() {
+                              var momentNow = moment();
+                                  $('#tarih-bolumu').html(momentNow.format('DD.MM.YYYY'));
+                                  $('#saat-bolumu').html(momentNow.format('hh:mm:ss'));
+                                }, 100);
+                              });
+                            });
+                    </script>
+            </div>
+        
+        <div class="row-xs-2 col-md-2">
+            <div>
+              <!-- SİTEYE İNGİLİZCE SÖZLÜK EKLEDİM. -->
+              <script language="javascript" src="http://ir.sitekodlari.com/ingtrsozluk1.js"></script>            
+            </div>        
+        </div>
+        
+        <div class="row-xs-2 col-md-2">          
+              <!-- SİTEYE IP KODU EKLEDİM.... -->
+              <script language="javascript" src="http://ir.sitekodlari.com/ipadresi4.js" style="font-size: 30px; text-align: right;"></script>
+              <!-- SİTEYE DİL ÇEVİRME ÖZELLİĞİ EKLEDİM. -->
+              <script language="javascript" src="http://ir.sitekodlari.com/sitediliceviri1.js"></script>
+      </div>
+    </div>
+</div>
+
+
+<!-- BUNDAN SONRAKİ ALAN DÖNEN RESİMLER YANİ CAROUSEL-ITEM ÇALIŞMASIDIR. -->
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="row-xs-4 col-md-5" style="border-style: solid;">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                      <li data-target="#demo" data-slide-to="3"></li>
+                      <li data-target="#demo" data-slide-to="4"></li>
+                  </ul>
+              
+                    <!-- The slideshow -->
+                  <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../07imageWork/images/imgbaby_y3.jpg" alt="Baby3" width="175px" height="100px">
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="../07imageWork/images/imgbaby_y4.jpg" alt="Baby4" width="175px" height="100px">
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="../07imageWork/images/imgbaby_y5.jpg" alt="Baby5" width="175px" height="100px">
+                        </div>
+
+                        <div class="carousel-item">
+                          <img src="../07imageWork/images/imgbaby_y6.jpg" alt="Baby6" width="175px" height="100px">
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="../07imageWork/images/imgbaby_y1.jpg" alt="Baby1" width="175px" height="100px">
+                    </div>
+                  </div>
+              
+                    <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+             
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+      </div>
+
+      <div class="row-xs-4 col-md-2" style="border-bottom-style: solid; border-top-style: solid">
+            <marquee scrollamount="3" height="300" width="100%" direction="up">Bu çalışma <br> 
+                  <strong> Hack Your Future </strong> <br> eğitimleri kapsamında HTML öğrenmek için yapılan denemeler kapsamında hazırlanmış
+                   bir sayfadır. Sayfa <br> <strong> gsismandenmark </strong> <br> kullanacısına aittir. <br><br>
+                    Yardım ve bilgi almak için  sayfanın sonundaki iletişim bilgilerinden ulaşabilirsiniz.</marquee>
+      </div>
+
+
+      <div class="row-xs-4 col-md-5" style="border-style: solid;>
+            <div id="demo2" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ul class="carousel-indicators">
+                      <li data-target="#demo2" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo2" data-slide-to="1"></li>
+                      <li data-target="#demo2" data-slide-to="2"></li>
+                      <li data-target="#demo2" data-slide-to="3"></li>
+                      <li data-target="#demo2" data-slide-to="4"></li>
+
+                  </ul>
+              
+                  <!-- The slideshow -->
+                <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="../07imageWork/images/imgbaby_y1.jpg" alt="Baby1" width="175px" height="100px">
+                      </div>
+                      
+                      <div class="carousel-item">
+                          <img src="../07imageWork/images/imgbaby_y3.jpg" alt="Baby3" width="175px" height="100px">
+                      </div>
+                      
+                      <div class="carousel-item">
+                          <img src="../07imageWork/images/imgbaby_y4.jpg" alt="Baby4" width="175px" height="100px">
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="../07imageWork/images/imgbaby_y5.jpg" alt="Baby5" width="175px" height="100px">
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="../07imageWork/images/imgbaby_y6.jpg" alt="Baby6" width="175px" height="100px">
+                  </div>
+                </div>
+              
+                  <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                
+                    <a class="carousel-control-next" href="#demo2" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+            </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" style="background-color: lightcyan;">
+    <div class="row-xs-12 col-md-12">
+          <marquee scrollamount="5" direction="Left">www.hackyourfuture.dk  2021 - Athens  By gsisman e-mail: gsismandenmark@gmail.com</marquee> 
+    </div>
+</div>
+ 
 
 
 
-
-
-
-    <script src="bootstrap4.js"></script>
+<script src="bootstrap4.js"></script>
 
 </body>
 </html>
